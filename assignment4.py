@@ -1,7 +1,7 @@
-a=input("Enter the paregraph: ")
+text=input("Enter the paregraph: ")
 
-print(list[a.split(" ")])
-b=list(a.split(" "))
+print(list[text.split(" ")])
+b=list(text.split(" "))
 print("Total number of words",len(b))
 print("Number of unique word",set(b))
 print("Longest word",max(b,key=len))
