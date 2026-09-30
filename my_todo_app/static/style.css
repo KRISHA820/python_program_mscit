@@ -1,0 +1,202 @@
+/* ------------------------------
+   Basic Settings
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+
+
+/* ------------------------------
+   Main Container
+------------------------------ */
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+
+/* ------------------------------
+   Main Heading
+------------------------------ */
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------
+   Form Box
+------------------------------ */
+
+.form-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------------------
+   Labels
+------------------------------ */
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* ------------------------------
+   Input & Select
+------------------------------ */
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+/* ------------------------------
+   Add Task Button
+------------------------------ */
+
+button {
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* ------------------------------
+   Table Box
+------------------------------ */
+
+.table-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+
+/* ------------------------------
+   Table
+------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Table Header */
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+}
+
+
+/* Table Data */
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* ------------------------------
+   Update Button
+------------------------------ */
+
+.update-btn {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background-color: #555;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.update-btn:hover {
+    background-color: #333;
+}
+
+
+/* ------------------------------
+   Delete Button
+------------------------------ */
+
+.delete-btn {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background-color: #777;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #555;
+}
+
+
+/* ------------------------------
+   Status
+------------------------------ */
+
+.status {
+    padding: 5px 10px;
+
+    background-color: #eee;
+
+    border-radius: 5px;
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>To-Do Management</title>
+     <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+    <h2>Task Details</h2>
+
+    <!-- Add Task Form -->
+
+    <form action="/add" method="POST">
+
+        <label>Task Name:</label>
+
+        <input type="text" name="taskname">
+
+        <br><br>
+
+
+        <label>Finish Date:</label>
+
+        <input type="date" name="finishdate">
+
+        <br><br>
+
+
+        <label>Status:</label>
+
+        <select name="status">
+
+            <option value="">Select Status</option>
+
+            <option value="Pending">Pending</option>
+
+            <option value="In Progress">In Progress</option>
+
+            <option value="Completed">Completed</option>
+
+        </select>
+
+        <br><br>
+
+
+        <button type="submit">
+            Add Task
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <!-- Display Tasks -->
+
+    <h2>Task List</h2>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Task Name</th>
+
+            <th>Finish Date</th>
+
+            <th>Status</th>
+
+            <th>Update</th>
+
+            <th>Delete</th>
+
+        </tr>
+
+
+        {% for task in tasks %}
+
+        <tr>
+
+            <td>
+                {{ task.id }}
+            </td>
+
+            <td>
+                {{ task.taskname }}
+            </td>
+
+            <td>
+                {{ task.finishdate }}
+            </td>
+
+            <td>
+                {{ task.status }}
+            </td>
+
+            <td>
+                <a href="{{ url_for('update_task', id=task.id) }}">
+                    Update
+                </a>
+            </td>
+
+            <td>
+                <a href="{{ url_for('delete_task', id=task.id) }}">
+                    Delete
+                </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
