@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <section class="form-card">
+        <h1>Edit Task</h1>
+
+        <form action="{{ url_for('update', id=task.id) }}"
+              method="POST">
+
+            <label>Task Title *</label>
+            <input type="text" name="title" maxlength="150"
+                   value="{{ task.title }}" required>
+
+            <label>Description</label>
+            <textarea name="description"
+                      maxlength="300">{{ task.description or "" }}</textarea>
+
+            <label>Priority</label>
+            <select name="priority" required>
+                <option value="High"
+                    {% if task.priority == "High" %}selected{% endif %}>
+                    High
+                </option>
+                <option value="Medium"
+                    {% if task.priority == "Medium" %}selected{% endif %}>
+                    Medium
+                </option>
+                <option value="Low"
+                    {% if task.priority == "Low" %}selected{% endif %}>
+                    Low
+                </option>
+            </select>
+
+            <label>Due Date</label>
+            <input type="date" name="due_date"
+                   value="{{ task.due_date.isoformat()
+                            if task.due_date else '' }}">
+
+            <button type="submit">Save Changes</button>
+            <a class="btn pending" href="{{ url_for('index') }}">
+                Cancel
+            </a>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
